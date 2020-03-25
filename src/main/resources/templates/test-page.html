@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">    <!-- подключаем шаблонизатор-->
+<head>
+    <title >TEST PAGE</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<!--бутстрап шапка-->
+<header th:insert="blocks/header :: header"></header>
+
+
+<!--бутстрап шапка-->
+<p th:text="'Hello, ' + ${name} + '!'" />
+
+<div th:each="el: ${posts}" class="alert alert-info mt-2">
+
+    <h3 th:text="${el.title}"/>
+    <h3 th:text="${el.answer}"/>
+    <a th:href="'/blog/' + ${el.id}"> Детальнее</a>
+
+</div>
+
+
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

@@ -17,5 +17,15 @@ public class MainController {
         // будет передан в шаблон return "greeting";
         return "greeting";  //вызываем шалон под названием greeting
     }
+    @GetMapping("/")
+    public  String mainPage(Model model){
+        model.addAttribute("name", "Main page");
+        return "index.html";
+    }
+    @GetMapping("/sign-in")
+    public  String signIn(Model model){
+        model.addAttribute("name", "sign-in");
+        return "sign-in.html";
+    }
 
 }

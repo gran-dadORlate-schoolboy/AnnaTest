@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">    <!-- подключаем шаблонизатор-->
+<head>
+    <title >TEST PAGE</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<!--бутстрап шапка-->
+<header th:insert="blocks/header :: header"></header>
+<!--бутстрап шапка-->
+
+
+<div class="container mt-5 mb-5">
+    <h1> Add Test</h1>
+    <form action="/test-page/add" method="post">
+        <input type="text" name="title" placeholder="Введите название " class="form-control"><br>
+        <input type="text" name="qestion" placeholder="Введите вопрос " class="form-control"><br>
+        <input type="text" name="answer" placeholder="Введите ответ " class="form-control"><br>
+        <button type="submit" class="btn btn-success">add test</button>
+    </form>
+</div>
+
+
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
