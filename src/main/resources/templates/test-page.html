@@ -12,13 +12,18 @@
 
 
 <!--бутстрап шапка-->
-<p th:text="'Hello, ' + ${name} + '!'" />
+
 
 <div th:each="el: ${posts}" class="alert alert-info mt-2">
 
     <h3 th:text="${el.title}"/>
+    <br>
+    <h3 th:text="${el.qestions}"/>
+    <br>
     <h3 th:text="${el.answer}"/>
-    <a th:href="'/blog/' + ${el.id}"> Детальнее</a>
+    <br>
+
+
 
 </div>
 

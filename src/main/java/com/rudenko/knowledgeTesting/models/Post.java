@@ -11,16 +11,10 @@ public class Post { //клас создает таблицу в бд с id,title
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
 
-    private  String title, qestions, answer;
+    private  String title;
+    private  String qestions;
+    private String answer;
     private  int views;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -54,6 +48,32 @@ public class Post { //клас создает таблицу в бд с id,title
         this.views = views;
     }
 
-
-
+    public Post() {
+    }
+    public  Post(String title, String qestions, String answer){
+        this.title = title;
+        this.qestions = qestions;
+        this.answer = answer;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
